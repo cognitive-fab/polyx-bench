@@ -1,0 +1,4 @@
+node_modules/
+.polyx/
+corpora/
+*.log

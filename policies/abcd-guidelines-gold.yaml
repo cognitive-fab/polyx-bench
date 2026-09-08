@@ -1,0 +1,678 @@
+# Gold alignment — a person's ruling on whether a mined rule and a written
+# clause are the same rule. EVALUATION INPUT.
+#
+# Alignment is the least reliable step in the system (F8.3). These verdicts
+# are what the automatic matcher is scored against, and the inter-rater
+# figure over pairs two people rated is what says whether the question is
+# even well posed. Written by `polyx gold <corpus> serve`.
+#
+# policy: abcd-guidelines v1
+pairs:
+  - rule: 01f0315bf74ac468
+    clause: c-promo_code_out_of_date-promo-code-ask-the-oracle
+    verdict: confirmed
+    rater: JJ
+    at: 1788033335292
+    stratum: exact
+    matcher: exact
+  - rule: 01f0315bf74ac468
+    clause: c-promo_code_out_of_date-promo-code-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788041240752
+    stratum: near-miss
+    matcher: null
+  - rule: 0bace601ea9399bf
+    clause: c-manage_dispute_bill-offer-refund-ask-the-oracle
+    verdict: rejected
+    rater: JJ
+    at: 1788041370607
+    stratum: tribal
+    matcher: null
+  - rule: 0e58d4dafaddfe2e
+    clause: c-status_service_added-offer-refund-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041378236
+    stratum: tribal
+    matcher: null
+  - rule: 131bdc9561b41759
+    clause: c-manage_extension-update-account-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033349751
+    stratum: exact
+    matcher: exact
+  - rule: 131bdc9561b41759
+    clause: c-status_service_added-update-account-record-reason
+    verdict: rejected
+    rater: JJ
+    at: 1788041264281
+    stratum: near-miss
+    matcher: null
+  - rule: 1849e00f92af475d
+    clause: c-missing-make-purchase-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033356213
+    stratum: exact
+    matcher: exact
+  - rule: 1a6412e1056ad9af
+    clause: c-cost-update-order-shipping-status
+    verdict: rejected
+    rater: JJ
+    at: 1788041274564
+    stratum: near-miss
+    matcher: null
+  - rule: 2f53860bbad8970e
+    clause: c-manage_create-make-purchase-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041383721
+    stratum: tribal
+    matcher: null
+  - rule: 326d7f52eb4b2860
+    clause: c-manage_create-make-purchase-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033466620
+    stratum: general
+    matcher: general
+  - rule: 326d7f52eb4b2860
+    clause: c-out_of_stock_one_item-make-purchase-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033467356
+    stratum: general
+    matcher: general
+  - rule: 3b005e09ec33c3fa
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041288701
+    stratum: near-miss
+    matcher: null
+  - rule: 4634bf824e2f4362
+    clause: c-refund_initiate-offer-refund-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033364534
+    stratum: exact
+    matcher: exact
+  - rule: 4656bbcdb0b4b029
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: confirmed
+    rater: JJ
+    at: 1788041398357
+    stratum: tribal
+    matcher: null
+  - rule: 4ec8920628e15423
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: rejected
+    rater: JJ
+    at: 1788041404081
+    stratum: tribal
+    matcher: null
+  - rule: 56083b077db2f27b
+    clause: c-manage_extension-update-account-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788041299288
+    stratum: near-miss
+    matcher: null
+  - rule: 5b0db067a4ffc24e
+    clause: c-cost-update-order-shipping-status
+    verdict: rejected
+    rater: JJ
+    at: 1788041411731
+    stratum: tribal
+    matcher: null
+  - rule: 5e3f2c2a9dd2e629
+    clause: c-manage_change_address-update-account-verify-identity
+    verdict: confirmed
+    rater: JJ
+    at: 1788033374001
+    stratum: exact
+    matcher: exact
+  - rule: 5e3f2c2a9dd2e629
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041307511
+    stratum: near-miss
+    matcher: null
+  - rule: 5ebdcbad6786adbf
+    clause: c-refund_status-notify-team-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788041418082
+    stratum: tribal
+    matcher: null
+  - rule: 6a445320e9fa3e3d
+    clause: c-manage_change_address-update-account-verify-identity
+    verdict: confirmed
+    rater: JJ
+    at: 1788033468069
+    stratum: general
+    matcher: general
+  - rule: 6a445320e9fa3e3d
+    clause: c-manage_change_phone-update-account-verify-identity
+    verdict: confirmed
+    rater: JJ
+    at: 1788033468378
+    stratum: general
+    matcher: general
+  - rule: 6a445320e9fa3e3d
+    clause: c-manage_extension-update-account-verify-identity
+    verdict: confirmed
+    rater: JJ
+    at: 1788033468627
+    stratum: general
+    matcher: general
+  - rule: 6a445320e9fa3e3d
+    clause: c-manage_payment_method-update-account-verify-identity
+    verdict: confirmed
+    rater: JJ
+    at: 1788033468834
+    stratum: general
+    matcher: general
+  - rule: 6af6c2d120016683
+    clause: c-out_of_stock_one_item-notify-team-record-reason
+    verdict: rejected
+    rater: JJ
+    at: 1788041316029
+    stratum: near-miss
+    matcher: null
+  - rule: 6ed762998f315f5d
+    clause: c-manage_extension-update-account-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788041423998
+    stratum: tribal
+    matcher: null
+  - rule: 79bcbbae08096172
+    clause: c-refund_status-notify-team-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788041433224
+    stratum: tribal
+    matcher: null
+  - rule: 7f96f9cc386f1918
+    clause: c-refund_status-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033385377
+    stratum: exact
+    matcher: exact
+  - rule: 82ff494d8f83a24f
+    clause: c-cost-update-order-shipping-status
+    verdict: rejected
+    rater: JJ
+    at: 1788041321833
+    stratum: near-miss
+    matcher: null
+  - rule: 8a292669ffa9c901
+    clause: c-recover_password-make-password-enter-details
+    verdict: confirmed
+    rater: JJ
+    at: 1788033471467
+    stratum: proposed
+    matcher: proposed
+  - rule: 8e249bb65663fb1e
+    clause: c-out_of_stock_general-notify-team-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033469089
+    stratum: general
+    matcher: general
+  - rule: 8e249bb65663fb1e
+    clause: c-refund_status-notify-team-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033469358
+    stratum: general
+    matcher: general
+  - rule: 91bf6ac0cc99d957
+    clause: c-reset_2fa-send-link-enter-details
+    verdict: rejected
+    rater: JJ
+    at: 1788041328568
+    stratum: near-miss
+    matcher: null
+  - rule: 91bf6ac0cc99d957
+    clause: c-status_due_date-send-link-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033389111
+    stratum: exact
+    matcher: exact
+  - rule: 93e8ae03cb1bc48f
+    clause: c-promo_code_out_of_date-promo-code-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033398847
+    stratum: exact
+    matcher: exact
+  - rule: 95087cbad6d09662
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: confirmed
+    rater: JJ
+    at: 1788041448218
+    stratum: tribal
+    matcher: null
+  - rule: 9f1d989854923604
+    clause: c-cost-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033469609
+    stratum: general
+    matcher: general
+  - rule: 9f1d989854923604
+    clause: c-missing-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033469883
+    stratum: general
+    matcher: general
+  - rule: 9f1d989854923604
+    clause: c-mistimed_billing_already_returned-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033470173
+    stratum: general
+    matcher: general
+  - rule: 9f1d989854923604
+    clause: c-refund_status-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033470381
+    stratum: general
+    matcher: general
+  - rule: 9f1d989854923604
+    clause: c-return_color-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033470619
+    stratum: general
+    matcher: general
+  - rule: 9f1d989854923604
+    clause: c-return_stain-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033470898
+    stratum: general
+    matcher: general
+  - rule: 9f1d989854923604
+    clause: c-status-update-order-validate-purchase
+    verdict: confirmed
+    rater: JJ
+    at: 1788033471205
+    stratum: general
+    matcher: general
+  - rule: a2b94418c921f91c
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041334022
+    stratum: near-miss
+    matcher: null
+  - rule: a4346195239f99fa
+    clause: c-manage_dispute_bill-offer-refund-ask-the-oracle
+    verdict: rejected
+    rater: JJ
+    at: 1788041455463
+    stratum: tribal
+    matcher: null
+  - rule: b1c2283752a65e87
+    clause: c-manage_payment_method-update-account-record-reason
+    verdict: confirmed
+    rater: JJ
+    at: 1788033405533
+    stratum: exact
+    matcher: exact
+  - rule: b9e28494e1916016
+    clause: c-promo_code_out_of_date-promo-code-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788041461899
+    stratum: tribal
+    matcher: null
+  - rule: bd39c43fccb2bd5f
+    clause: c-manage_extension-update-account-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788041339928
+    stratum: near-miss
+    matcher: null
+  - rule: d725d112e7729e7c
+    clause: c-manage_dispute_bill-offer-refund-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033411104
+    stratum: exact
+    matcher: exact
+  - rule: d725d112e7729e7c
+    clause: c-status_service_added-offer-refund-record-reason
+    verdict: rejected
+    rater: JJ
+    at: 1788041345923
+    stratum: near-miss
+    matcher: null
+  - rule: db029930443585e2
+    clause: c-status_service_added-offer-refund-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041467047
+    stratum: tribal
+    matcher: null
+  - rule: dcdd17482aaabfaa
+    clause: c-manage-update-order-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033425601
+    stratum: exact
+    matcher: exact
+  - rule: dcdd17482aaabfaa
+    clause: c-refund_status-update-order-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033429962
+    stratum: exact
+    matcher: exact
+  - rule: dcdd17482aaabfaa
+    clause: c-status_delivery_time-update-order-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033457031
+    stratum: exact
+    matcher: exact
+  - rule: e3b2fb1bee95aa2d
+    clause: c-cost-update-order-shipping-status
+    verdict: rejected
+    rater: JJ
+    at: 1788041350896
+    stratum: near-miss
+    matcher: null
+  - rule: e5d6ca40949883f2
+    clause: c-manage_create-make-purchase-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033460497
+    stratum: exact
+    matcher: exact
+  - rule: ea1dd57e9bc1b888
+    clause: c-out_of_stock_one_item-notify-team-record-reason
+    verdict: rejected
+    rater: JJ
+    at: 1788041473350
+    stratum: tribal
+    matcher: null
+  - rule: ed0c9dec06fac8a6
+    clause: c-missing-make-purchase-update-order
+    verdict: rejected
+    rater: JJ
+    at: 1788041355695
+    stratum: near-miss
+    matcher: null
+  - rule: fe0b9642518aede4
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788041476606
+    stratum: tribal
+    matcher: null
+  - rule: feaf7acde5fcc97f
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: confirmed
+    rater: JJ
+    at: 1788033465272
+    stratum: exact
+    matcher: exact
+  - rule: feaf7acde5fcc97f
+    clause: c-status_due_date-send-link-verify-identity
+    verdict: rejected
+    rater: JJ
+    at: 1788041360376
+    stratum: near-miss
+    matcher: null
+superseded:
+  - rule: 01f0315bf74ac468
+    clause: c-promo_code_out_of_date-promo-code-membership
+    verdict: confirmed
+    rater: JJ
+    at: 1788033471668
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 0bace601ea9399bf
+    clause: c-manage_dispute_bill-offer-refund-ask-the-oracle
+    verdict: rejected
+    rater: JJ
+    at: 1788033517396
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 0e58d4dafaddfe2e
+    clause: c-status_service_added-offer-refund-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788033524525
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 131bdc9561b41759
+    clause: c-status_service_added-update-account-record-reason
+    verdict: confirmed
+    rater: JJ
+    at: 1788033472541
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 1a6412e1056ad9af
+    clause: c-cost-update-order-shipping-status
+    verdict: confirmed
+    rater: JJ
+    at: 1788033472824
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 2f53860bbad8970e
+    clause: c-manage_create-make-purchase-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788033529778
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 3b005e09ec33c3fa
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033473046
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 4656bbcdb0b4b029
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: rejected
+    rater: JJ
+    at: 1788033543491
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 4ec8920628e15423
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: rejected
+    rater: JJ
+    at: 1788033547124
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 56083b077db2f27b
+    clause: c-manage_extension-update-account-membership
+    verdict: confirmed
+    rater: JJ
+    at: 1788033473298
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 5b0db067a4ffc24e
+    clause: c-cost-update-order-shipping-status
+    verdict: rejected
+    rater: JJ
+    at: 1788033549249
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 5e3f2c2a9dd2e629
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033473499
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 5ebdcbad6786adbf
+    clause: c-refund_status-notify-team-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033553798
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 6af6c2d120016683
+    clause: c-out_of_stock_one_item-notify-team-record-reason
+    verdict: confirmed
+    rater: JJ
+    at: 1788033473725
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 6ed762998f315f5d
+    clause: c-manage_extension-update-account-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788033564303
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 79bcbbae08096172
+    clause: c-refund_status-notify-team-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033567660
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 82ff494d8f83a24f
+    clause: c-cost-update-order-shipping-status
+    verdict: confirmed
+    rater: JJ
+    at: 1788033473951
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 91bf6ac0cc99d957
+    clause: c-reset_2fa-send-link-enter-details
+    verdict: confirmed
+    rater: JJ
+    at: 1788033475059
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: 95087cbad6d09662
+    clause: c-status_due_date-send-link-subscription-status
+    verdict: confirmed
+    rater: JJ
+    at: 1788033574809
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: a2b94418c921f91c
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: confirmed
+    rater: JJ
+    at: 1788033475898
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: a4346195239f99fa
+    clause: c-manage_dispute_bill-offer-refund-ask-the-oracle
+    verdict: rejected
+    rater: JJ
+    at: 1788033581241
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: b9e28494e1916016
+    clause: c-promo_code_out_of_date-promo-code-membership
+    verdict: rejected
+    rater: JJ
+    at: 1788033584289
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: bd39c43fccb2bd5f
+    clause: c-manage_extension-update-account-membership
+    verdict: confirmed
+    rater: JJ
+    at: 1788033476900
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: d725d112e7729e7c
+    clause: c-status_service_added-offer-refund-record-reason
+    verdict: confirmed
+    rater: JJ
+    at: 1788033478897
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: db029930443585e2
+    clause: c-status_service_added-offer-refund-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788033586942
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: e3b2fb1bee95aa2d
+    clause: c-cost-update-order-shipping-status
+    verdict: rejected
+    rater: JJ
+    at: 1788033496252
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: ea1dd57e9bc1b888
+    clause: c-out_of_stock_one_item-notify-team-record-reason
+    verdict: rejected
+    rater: JJ
+    at: 1788033590128
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: ed0c9dec06fac8a6
+    clause: c-missing-make-purchase-update-order
+    verdict: confirmed
+    rater: JJ
+    at: 1788033501566
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: fe0b9642518aede4
+    clause: c-status_service_added-update-account-pull-up-account
+    verdict: rejected
+    rater: JJ
+    at: 1788033594442
+    stratum: tribal
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"
+  - rule: feaf7acde5fcc97f
+    clause: c-status_due_date-send-link-verify-identity
+    verdict: rejected
+    rater: JJ
+    at: 1788033510194
+    stratum: near-miss
+    matcher: null
+    note: "superseded: re-rated on the aligned comparison view (rater JJ)"

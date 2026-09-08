@@ -1,0 +1,160 @@
+# τ²-bench retail policy (corpora/tau2-src/data/tau2/domains/retail/policy.md),
+# decomposed BY HAND into atomic clauses. EVALUATION INPUT — read only by
+# src/evaluate. The agent that produced the trajectories was handed this
+# document in its prompt (FS §6.2), so recall on this corpus is reported a
+# second time over the clauses violated at least once.
+#
+# Expressible = polyx's rule language can state it: a precedence between an
+# action and a prior action, or an at-most-once on an action. Everything the
+# policy says about utterances ("obtain explicit confirmation"), about order
+# state ("only if its status is pending") or about payment methods is real
+# guidance polyx cannot represent, and is counted as such.
+policy: tau2-retail-policy
+version: 1
+source: data/tau2/domains/retail/policy.md, hand-decomposed 2026-08-29
+clauses:
+  # "At the beginning of the conversation, you have to authenticate the user
+  # identity by locating their user id via email, or via name + zip code."
+  - id: r-auth-cancel
+    text: "Authenticate the user before cancelling an order."
+    expressible: true
+    shape: precedence
+    subject: action:cancel_pending_order
+    guard: action:authenticate
+  - id: r-auth-modify-items
+    text: "Authenticate the user before modifying an order's items."
+    expressible: true
+    shape: precedence
+    subject: action:modify_pending_order_items
+    guard: action:authenticate
+  - id: r-auth-modify-address
+    text: "Authenticate the user before modifying an order's address."
+    expressible: true
+    shape: precedence
+    subject: action:modify_pending_order_address
+    guard: action:authenticate
+  - id: r-auth-modify-payment
+    text: "Authenticate the user before modifying an order's payment."
+    expressible: true
+    shape: precedence
+    subject: action:modify_pending_order_payment
+    guard: action:authenticate
+  - id: r-auth-return
+    text: "Authenticate the user before returning delivered items."
+    expressible: true
+    shape: precedence
+    subject: action:return_delivered_order_items
+    guard: action:authenticate
+  - id: r-auth-exchange
+    text: "Authenticate the user before exchanging delivered items."
+    expressible: true
+    shape: precedence
+    subject: action:exchange_delivered_order_items
+    guard: action:authenticate
+  - id: r-auth-user-address
+    text: "Authenticate the user before modifying their default address."
+    expressible: true
+    shape: precedence
+    subject: action:modify_user_address
+    guard: action:authenticate
+  - id: r-auth-info
+    text: "Once the user has been authenticated, you can provide information about orders, products and profile."
+    expressible: false
+    reason: subject is not a consequential action
+
+  # "An order can only be cancelled/modified/returned/exchanged if its status
+  # is …, and you should check its status before taking the action."
+  - id: r-check-cancel
+    text: "Check the order's status before cancelling it."
+    expressible: true
+    shape: precedence
+    subject: action:cancel_pending_order
+    guard: action:get_order_details
+  - id: r-check-modify-items
+    text: "Check the order's status before modifying its items."
+    expressible: true
+    shape: precedence
+    subject: action:modify_pending_order_items
+    guard: action:get_order_details
+  - id: r-check-modify-address
+    text: "Check the order's status before modifying its address."
+    expressible: true
+    shape: precedence
+    subject: action:modify_pending_order_address
+    guard: action:get_order_details
+  - id: r-check-modify-payment
+    text: "Check the order's status before modifying its payment."
+    expressible: true
+    shape: precedence
+    subject: action:modify_pending_order_payment
+    guard: action:get_order_details
+  - id: r-check-return
+    text: "Check the order's status before returning its items."
+    expressible: true
+    shape: precedence
+    subject: action:return_delivered_order_items
+    guard: action:get_order_details
+  - id: r-check-exchange
+    text: "Check the order's status before exchanging its items."
+    expressible: true
+    shape: precedence
+    subject: action:exchange_delivered_order_items
+    guard: action:get_order_details
+
+  # "Exchange or modify order tools can only be called once per order."
+  - id: r-once-modify-items
+    text: "Modify order items at most once."
+    expressible: true
+    shape: at-most-one
+    subject: action:modify_pending_order_items
+  - id: r-once-exchange
+    text: "Exchange delivered items at most once."
+    expressible: true
+    shape: at-most-one
+    subject: action:exchange_delivered_order_items
+
+  # Real guidance polyx cannot state
+  - id: r-confirm
+    text: "Before taking any action that updates the database, list the action details and obtain explicit user confirmation."
+    expressible: false
+    reason: guard is not an action
+  - id: r-one-user
+    text: "You can only help one user per conversation."
+    expressible: false
+    reason: needs a fact polyx does not carry
+  - id: r-status-pending
+    text: "An order can only be cancelled or modified if its status is pending."
+    expressible: false
+    reason: needs a fact from a tool result
+  - id: r-status-delivered
+    text: "An order can only be returned or exchanged if its status is delivered."
+    expressible: false
+    reason: needs a fact from a tool result
+  - id: r-cancel-reason
+    text: "The cancellation reason must be 'no longer needed' or 'ordered by mistake'."
+    expressible: false
+    reason: needs a slot-value rule polyx does not mine
+  - id: r-one-call
+    text: "Make at most one tool call at a time, and never respond to the user in the same turn."
+    expressible: false
+    reason: shape polyx does not mine
+  - id: r-transfer-message
+    text: "After transfer_to_human_agents, send the transfer message to the user."
+    expressible: false
+    reason: subject is not an action
+  - id: r-no-invention
+    text: "Do not make up information, procedures, or subjective recommendations."
+    expressible: false
+    reason: free-text instruction
+  - id: r-deny
+    text: "Deny requests that are against this policy."
+    expressible: false
+    reason: free-text instruction
+  - id: r-payment-gift-card
+    text: "A gift card used for payment or refund must have enough balance."
+    expressible: false
+    reason: needs a fact from a tool result
+  - id: r-same-product
+    text: "Items may only be modified or exchanged to a variant of the same product."
+    expressible: false
+    reason: needs a fact from a tool result

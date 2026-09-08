@@ -1,0 +1,15 @@
+polyx-bench
+Copyright (c) 2026 Cognitive Fab LLC.
+
+Licensed under the Apache License, Version 2.0; see LICENSE.
+
+The clause sets here are derived work. Upstream attribution:
+
+ABCD — Chen, Chen, Yang, Lin, Yu (2021), Action-Based Conversations Dataset,
+  NAACL. MIT. Source of policies/abcd-guidelines.yaml.
+
+tau2-bench — Barres et al. (2025), tau2-Bench. MIT. Source of
+  policies/tau2-retail-policy.yaml.
+
+No benchmark data is redistributed; only the decompositions and the human
+verdicts, which are our own work.
